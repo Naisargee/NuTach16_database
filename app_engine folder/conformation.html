@@ -1,0 +1,270 @@
+<!DOCTYPR html>
+<html>
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data Conformation</title>
+
+  <SCRIPT type="text/javascript">
+  window.history.forward();
+  function noBack() { window.history.forward(); }
+  </SCRIPT>
+</head>
+
+
+<body onunload="noBack();" onpageshow="noBack();">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 center-block">
+        <h1> Conform Data</h1>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <form class="form-horizontal" action="/Submit" method="post">
+        <div class="form-group">
+          <label for="regid" class="col-sm-2 control-label">Registration Id</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="regid" id="regid" placeholder="Registration Id" value="{{ regid }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name" class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="{{ name }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contactnum" class="col-sm-2 control-label">Contact Number</label>
+          <div class="col-sm-10">
+              <input type="text" name="contactnum" class="form-control" id="contactnum" placeholder="Contact Number" value="{{ contactnum }}" maxlength="10" minlength="10">
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" value={{ email }}>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="totalfee" class="col-sm-2 control-label">Total Fee</label>
+          <div class="col-sm-2">
+            <input type="number" name="totalfee" class="form-control" id="totalfee" value={{ totalfee }} required>
+          </div>
+
+          <label for="paid" class="col-sm-2 control-label">Paid</label>
+          <div class="col-sm-2">
+            <input type="number" name="paid" class="form-control" id="paid" value={{ paid }} required>
+          </div>
+
+          <label for="remaining" class="col-sm-2 control-label">Remaining</label>
+          <div class="col-sm-2">
+            <input type="number" name="remaining" class="form-control" id="remaining" value={{ remaining }} required>
+          </div>
+        </div>
+
+
+        <br><br>
+        <hr>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-3 center">
+            <legend>CHEMOZALE</legend>
+            <table>
+              <tr><td><input type="checkbox" name="EVENTS" id="chemecar" value="Cham E Car" {% if "Cham E Car" in EVENTS %}checked="1"{% endif %}> Cham E Car </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="chemology" value="Chemology" {% if "Chemology" in EVENTS %}checked="1"{% endif %}> Chemology </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="industrialexperience" value="Industrial Experience" {% if "Industrial Experience" in EVENTS %}checked="1"{% endif %}> Industrial Experience </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="chemicalhoousie" value="Chemical Housie" {% if "Chemical Housie" in EVENTS %}checked="1"{% endif %}> Chemical Housie </td></tr>
+            </table>
+          </div>
+          <div class="col-md-3 center">
+            <legend>EELUMINATI</legend>
+            <table>
+              <tr><td><input type="checkbox" name="EVENTS" id="electrovyapar" value="Electro Vyapar" {% if "Electro Vyapar" in EVENTS %}checked="1"{% endif %}> Electro Vyapar </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="eplacement" value="E Placement" {% if "E Placement" in EVENTS %}checked="1"{% endif %}> E Placement </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="techtreasurehunt" value="Tech Treasurehunt" {% if "Tech Treasurehunt" in EVENTS %}checked="1"{% endif %}> Tech Treasurehunt </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="audiovisualquiz" value="Audio Visual Quiz" {% if "Audio Visual Quiz" in EVENTS %}checked="1"{% endif %}> Audio Visual Quiz </td></tr>
+            </table>
+          </div>
+          <div class="col-md-3 center">
+            <legend>I-MANAGE</legend>
+            <table>
+              <tr><td><input type="checkbox" name="EVENTS" id="vyapaar" value="Vyapaar" {% if "Vyapaar" in EVENTS %}checked="1"{% endif %}> Vyapaar </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="rocketsingh" value="ROCKETSINGH" {% if "ROCKETSINGH" in EVENTS %}checked="1"{% endif %}> ROCKETSINGH </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="brodies" value="B-Rodies" {% if "B-Rodies" in EVENTS %}checked="1"{% endif %}> B-Rodies </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="maad" value="Maad-Mad About Ad" {% if "Maad-Mad About Ad" in EVENTS %}checked="1"{% endif %}> Maad-Mad About Ad </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="twistandturn" value="Twist And Turn" {% if "Twist And Turn" in EVENTS %}checked="1"{% endif %}> Twist And Turn </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="friendsomania" value="Friends-O-Mania" {% if "Friends-O-Mania" in EVENTS %}checked="1"{% endif %}> Friends-O-Mania </td></tr>
+            </table>
+          </div>
+        </div>
+
+        <br><br>
+
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-3 center">
+            <legend>CODE-O-CRATS</legend>
+            <table>
+              <tr><td><input type="checkbox" name="EVENTS" id="voidfnx" value="Void FNX" {% if "Void FNX" in EVENTS %}checked="1"{% endif %}> Void FNX </td>
+                  <td><input type="checkbox" name="EVENTS" id="langaming" value="LAN Gaming" {% if "LAN Gaming" in EVENTS %}checked="1"{% endif %}> LAN Gaming </td>
+              </tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="bugsbunny" value="Bugs Bunny" {% if "Bugs Bunny" in EVENTS %}checked="1"{% endif %}> Bugs Bunny </td>
+                  <td><input type="checkbox" name="EVENTS" id="hackathon" value="Hackathon" {% if "Hackathon" in EVENTS %}checked="1"{% endif %}> Hackathon </td>
+              </tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="codedepirates" value="Code-De-Pirates" {% if "Code-De-Pirates" in EVENTS %}checked="1"{% endif %}> Code-De-Pirates </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="readanddecipher" value="Read and decipher" {% if "Read and decipher" in EVENTS %}checked="1"{% endif %}> Read and decipher </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="thinkyoureready" value="Think You're Ready?" {% if "Think You're Ready?" in EVENTS %}checked="1"{% endif %}> Think You're Ready? </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="infomaniacs" value="InfoManiacs" {% if "InfoManiacs" in EVENTS %}checked="1"{% endif %}> InfoManiacs </td></tr>
+            </table>
+          </div>
+          <div class="col-md-3 center">
+            <legend>MECHATRIX</legend>
+            <table>
+              <tr><td><input type="checkbox" name="EVENTS" id="waterrocket" value="Water Rocket" {% if "Water Rocket" in EVENTS %}checked="1"{% endif %}> Water Rocket </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="hydroarm" value="HydroArm" {% if "HydroArm" in EVENTS %}checked="1"{% endif %}> HydroArm </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="aeromobilearm" value="Aeromobile Quiz" {% if "Aeromobile Quiz" in EVENTS %}checked="1"{% endif %}> Aeromobile Quiz </td></tr>
+            </table>
+          </div>
+          <div class="col-md-3 center">
+            <legend>EUPHORIA</legend>
+            <table>
+              <tr><td><input type="checkbox" name="EVENTS" id="vyapaar" value="Mock CID" {% if "Mock CID" in EVENTS %}checked="1"{% endif %}> Mock CID </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="rocketsingh" value="Quiz-O-Dare" {% if "Quiz-O-Dare" in EVENTS %}checked="1"{% endif %}> Quiz-O-Dare </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="brodies" value="Block-Tackle(JAM)" {% if "Block-Tackle(JAM)" in EVENTS %}checked="1"{% endif %}> Block-Tackle(JAM) </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="maad" value="Bag,Borrow,Steal" {% if "Bag,Borrow,Steal" in EVENTS %}checked="1"{% endif %}> Bag,Borrow,Steal </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="twistandturn" value="Best From Waste" {% if "Best From Waste" in EVENTS %}checked="1"{% endif %}> Best From Waste </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" id="friendsomania" value="NU-Lens(Online)" {% if "NU-Lens(Online)" in EVENTS %}checked="1"{% endif %}> NU-Lens(Online) </td></tr>
+            </table>
+          </div>
+
+        </div>
+
+        <br><br>
+
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-3 center">
+              <legend>EC-TRONICS</legend>
+              <table>
+                <tr><td><input type="checkbox" name="EVENTS" value="Crackduino" {% if "Crackduino" in EVENTS %}checked="1"{% endif %}> Crackduino </td>
+                    <td><input type="checkbox" name="EVENTS" value="Make in EC" {% if "Make in EC" in EVENTS %}checked="1"{% endif %}> Make in EC </td>
+                </tr>
+                <tr><td><input type="checkbox" name="EVENTS" value="Digimania" {% if "Digimania" in EVENTS %}checked="1"{% endif %}> Digimania </td></tr>
+                <tr><td><input type="checkbox" name="EVENTS" value="AnalogSim" {% if "AnalogSim" in EVENTS %}checked="1"{% endif %}> AnalogSim </td></tr>
+                <tr><td><input type="checkbox" name="EVENTS" value="Paper Presentation" {% if "Paper Presentation-EC" in EVENTS %}checked="1"{% endif %}> Paper Presentation-EC </td></tr>
+              </table>
+            </div>
+            <div class="col-md-3 center">
+              <legend>ROBOTICS</legend>
+              <table>
+                <tr><td><input type="checkbox" name="EVENTS" value="Death Race" {% if "Death Race" in EVENTS %}checked="1"{% endif %}> Death Race </td>
+                    <td><input type="checkbox" name="EVENTS" value="Shotput" {% if "Shotput" in EVENTS %}checked="1"{% endif %}> Shotput </td>
+                </tr>
+                <tr><td><input type="checkbox" name="EVENTS" value="Robominton" {% if "Robominton" in EVENTS %}checked="1"{% endif %}> Robominton </td>
+                    <td><input type="checkbox" name="EVENTS" value="Hell in Cell" {% if "Hell in Cell" in EVENTS %}checked="1"{% endif %}> Hell in Cell </td>
+                </tr>
+                <tr><td><input type="checkbox" name="EVENTS" value="Line Follower Rac" {% if "Line Follower Rac" in EVENTS %}checked="1"{% endif %}> Line Follower Rac </td></tr>
+                <tr><td><input type="checkbox" name="EVENTS" value="Robot Soccer" {% if "Robot Soccer" in EVENTS %}checked="1"{% endif %}> Robot Soccer </td></tr>
+              </table>
+            </div>
+            <div class="col-md-3 center">
+              <legend>THINK-IC</legend>
+              <table>
+                <tr><td><input type="checkbox" name="EVENTS" value="Junkyard Electronics" {% if "Junkyard Electronics" in EVENTS %}checked="1"{% endif %}> Junkyard Electronics </td></tr>
+                <tr><td><input type="checkbox" name="EVENTS" value="Diji-Tronics" {% if "Diji-Tronics" in EVENTS %}checked="1"{% endif %}> Diji-Tronics </td></tr>
+                <tr><td><input type="checkbox" name="EVENTS" value="E-mania" {% if "E-mania" in EVENTS %}checked="1"{% endif %}> E-mania </td></tr>
+              </table>
+            </div>
+          </div>
+
+        <br><br>
+
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-3 center">
+            <legend>CIVILCREED</legend>
+            <table>
+              <tr><td><input type="checkbox" name="EVENTS" value="Civilion hunt" {% if "Civilion hunt" in EVENTS %}checked="1"{% endif %}> Civilion hunt </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Plan De Nirma" {% if "Plan De Nirma" in EVENTS %}checked="1"{% endif %}> Plan De Nirma </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Frame The Helipad" {% if "Frame The Helipad" in EVENTS %}checked="1"{% endif %}> Frame The Helipad </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Civil geek" {% if "Civil geek" in EVENTS %}checked="1"{% endif %}> Civil geek </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Poster Presentation - Digitalization In Civil" {% if "Poster Presentation - Digitalization In Civil" in EVENTS %}checked="1"{% endif %}> Poster Presentation - Digitalization In Civil </td></tr>
+            </table>
+          </div>
+          <div class="col-md-3 center">
+            <legend>NOESIS</legend>
+            <table>
+              <tr><td><input type="checkbox" name="EVENTS" value="India Quiz" {% if "India Quiz" in EVENTS %}checked="1"{% endif %}> India Quiz </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Debate" {% if "Debate" in EVENTS %}checked="1"{% endif %}> Debate </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Scavenger Hunt" {% if "Scavenger Hunt" in EVENTS %}checked="1"{% endif %}> Scavenger Hunt </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Spell Bee" {% if "Spell Bee" in EVENTS %}checked="1"{% endif %}> Spell Bee </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Gully Cricket/BasketBall" {% if "Gully Cricket/BasketBall" in EVENTS %}checked="1"{% endif %}> Gully Cricket/BasketBall </td></tr>
+            </table>
+          </div>
+          <div class="col-md-3 center">
+            <legend>PRESENTATION</legend>
+            <table>
+              <tr><td><input type="checkbox" name="EVENTS" value="Paper Pesentation" {% if "Paper Pesentation" in EVENTS %}checked="1"{% endif %}> Paper Pesentation </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Project Presentation" {% if "Project Presentation" in EVENTS %}checked="1"{% endif %}> Project Presentation </td></tr>
+              <tr><td><input type="checkbox" name="EVENTS" value="Poster Presentation" {% if "Poster Presentation" in EVENTS %}checked="1"{% endif %}> Poster Presentation </td></tr>
+            </table>
+          </div>
+        </div>
+
+        <br><br>
+        <hr>
+
+        <div class="row">
+          <div class="col-md-2 center"></div>
+          <div class="col-md-5 center">
+            <legend>WORKSHOPS</legend>
+            <table>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Internet Of Things" {% if "Internet Of Things" in WORKSHOPS %}checked="1"{% endif %}> Internet Of Things</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Android 6.0 Development" {% if "Android 6.0 Development" in WORKSHOPS %}checked="1"{% endif %}> Android 6.0 Development</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Website Design using Google Blogger" {% if "Website Design using Google Blogger" in WORKSHOPS %}checked="1"{% endif %}> Website Design using Google Blogger</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Hands-on with Arduino" {% if "Hands-on with Arduino" in WORKSHOPS %}checked="1"{% endif %}> Hands-on with Arduino</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Auto Extravaganze" {% if "Auto Extravaganze" in WORKSHOPS %}checked="1"{% endif %}> Auto Extravaganze</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Creo workshop" {% if "Creo workshop" in WORKSHOPS %}checked="1"{% endif %}> Creo workshop</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Workshop on entrepreneurship" {% if "Workshop on entrepreneurship" in WORKSHOPS %}checked="1"{% endif %}> Workshop on entrepreneurship</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Design And Analysis of 3-Storey Building" {% if "Design And Analysis of 3-Storey Building" in WORKSHOPS %}checked="1"{% endif %}> Design And Analysis of 3-Storey Building</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Sophisticated Analytical Instruments" {% if "Sophisticated Analytical Instruments" in WORKSHOPS %}checked="1"{% endif %}> Sophisticated Analytical Instruments</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Application of MATLAB in Electrical Engg." {% if "Application of MATLAB in Electrical Engg." in WORKSHOPS %}checked="1"{% endif %}> Application of MATLAB in Electrical Engg.</td></tr>
+              <tr><td><input type="checkbox" name="WORKSHOPS" value="Advanced Photography with 360 degree Techniques" {% if "Advanced Photography with 360 degree Techniques" in WORKSHOPS %}checked="1"{% endif %}> Advanced Photography with 360 degree Techniques</td></tr>
+            </table>
+          </div>
+          <div class="col-md-5 center">
+            <legend>TUTORIALS</legend>
+            <table>
+              <tr><td><input type="checkbox" name="TUTORIALS" value="LTE technology" {% if "LTE technology" in TUTORIALS %}checked="1"{% endif %}> LTE technology</td></tr>
+            </table>
+          </div>
+        </div>
+
+
+        <br><br>
+        <div class="row">
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Conform and submit</button>
+          </div>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
